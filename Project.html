@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .main{
+            border-color: black;
+            border-style: dotted solid dotted ;
+            border-width: 2px ;
+            padding: 3%;
+
+
+        }
+        .tab1{
+            width: 100%;
+        }
+        #tb{
+            align-self: center;
+            width: 300px;
+            height: 100px;
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <table border="2" class="tab1">
+            <tr>
+            <td><button type="button" onclick="text()">B1</button></td>
+            <td colspan="3"><p id="text">You are in G30</p></td></tr>
+            <tr>
+                <td colspan="2"><img id="img" src="" width="300px"</td>
+                <td><button type="button" onclick="img(0)">B2</button></td>
+                <td><button type="button" ondblclick="img(1)">B3</button></td>
+            </tr>
+            <tr>
+                <td colspan="3"><p id="uni">Chitkara University</p></td>
+                <td><button type="button" onclick="uni()">B4</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><table id="tb" border="2">
+                    <tr>
+                        <th></th>
+                        <th colspan="2"></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td></td>
+                    </tr>
+                </table></td>
+                <td colspan="2"><button type="button" onclick="table()">B5</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function text(){
+            document.getElementById("text").innerHTML= "You are in G29"
+        }
+        function uni(){
+            document.getElementById("uni").style.backgroundColor="red";
+            document.getElementById("uni").style.fontSize="50px"
+        }
+        function table(){
+            document.getElementById("tb").style.opacity="1";
+        }
+        function img(st){
+          if (st==0) {
+              a = "change.jpg"
+
+          }
+          else{
+              a = "not change.jpg"
+          }
+          document.getElementById("img").src = "bg.jpg";
+        }
+       
+    </script>
+    
+</body>
+</html>
